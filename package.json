@@ -1,0 +1,29 @@
+{
+	"name": "monra-legacy",
+	"version": "0.0.1",
+	"type": "module",
+	"description": "Monra by ramon-victor",
+	"main": "src/index.js",
+	"scripts": {
+		"start": "node ."
+	},
+	"keywords": [
+		"nodejs",
+		"whatsapp-web.js",
+		"monra",
+		"ramon-victor"
+	],
+	"author": "ramon-victor",
+	"license": "GPL-3.0",
+	"dependencies": {
+		"axios": "^1.4.0",
+		"colors": "^1.4.0",
+		"dotenv": "^16.3.1",
+		"ffmpeg": "^0.0.4",
+		"fs": "^0.0.1-security",
+		"moment-timezone": "^0.5.37",
+		"openai": "^4.28.4",
+		"qrcode": "^1.5.3",
+		"whatsapp-web.js": "github:pedroslopez/whatsapp-web.js#webpack-exodus"
+	}
+}

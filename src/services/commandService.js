@@ -21,7 +21,7 @@ export const handleCommands = async (message, contact) => {
 
 	if (command) {
 		await commands[command](message, contact);
-	} else if (process.env.GPT) {
+	} else {
 		await handleGPT(message);
 	}
 };

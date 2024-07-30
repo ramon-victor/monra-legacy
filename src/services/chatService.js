@@ -98,17 +98,12 @@ async function createChatCompletion(model, prompt) {
 	return response;
 }
 
-function getRandomFallbackModel() {
-	const fallbackModels = ["gpt-3.5-turbo-16k", "gpt-3.5-turbo"];
-	return fallbackModels[Math.floor(Math.random() * fallbackModels.length)];
-}
-
 export const processChatWithOpenAI = async (prompt) => {
 	try {
-		const model = "gpt-4";
+		const model = process.env.MODEL;
 		return await createChatCompletion(model, prompt);
 	} catch (error) {
-		const fallbackModel = getRandomFallbackModel();
+		const fallbackModel = process.env.FALLBACK_MODEL;
 		console.error(`Model failed: ${error}`);
 		try {
 			return await createChatCompletion(fallbackModel, prompt);
